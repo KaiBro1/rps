@@ -1,4 +1,5 @@
-#!/bin/python3
+#!/bin/python3s
+
 from random import randint
 import time 
 
@@ -11,18 +12,22 @@ print ('paper < scissors')
 
 def rpc():
  
+  rock = ["rock", "Rock", "R", "r"]
+  scissors = ["scissors", "Scissors", "S", "s"]
+  paper = ["paper", "Paper", "p", "P"]
+  
+ 
   player = input('Rock (r), Paper (p) or Scissors (s)?') 
   
   print(player, 'vs', end =' ')
   
   chosen = randint(1,3)
-  #print(chosen)
   
   if chosen == 1:
     computer = 'r'
   
   elif chosen == 2:
-    computer = 'p'
+    computer = 'p' 
     
   else:
     computer = 's'
@@ -33,27 +38,27 @@ def rpc():
     print('DRAW!')
     rpc()
     
-  if player == 'r' and computer == 's':
+  if (player == 'r' or player == 'rock' or player == 'Rock' or player == 'R') and computer == 's':
       print ('Player Wins!')
       rpc()
   
-  if player == 'r' and computer == 'p':
+  if (player == 'r' or player == 'rock' or player == 'Rock' or player == 'R') and computer == 'p':
       print ('Computer Wins!')
       rpc()
       
-  if player == 's' and computer == 'p':
+  if (player == 's' or player == 'S' or player == 'Scissors' or player == 'scissors') and computer == 'p':
       print ('Player Wins!')
       rpc()
       
-  if player == 's' and computer == 'r':
+  if (player == 's' or player == 'S' or player == 'Scissors' or player == 'scissors') and computer == 'r':
       print ('Computer Wins!')
       rpc()
       
-  if player == 'p' and computer == 'r':
+  if (player == 'p' or player == 'Paper' or player == 'paper' or player == 'P') and computer == 'r':
       print ('Player Wins!')
       rpc()
   
-  if player == 'p' and computer == 's':
+  if (player == 'p' or player == 'Paper' or player == 'paper' or player == 'P') and computer == 's':
       print ('Computer Wins!')
       rpc()
   
